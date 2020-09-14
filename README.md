@@ -1,68 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Hyperglance SeniorReact Developer - Technical Assessment
 
-## Available Scripts
+# 1. Implement an Algorithm (Solution)
 
-In the project directory, you can run:
+    function countLessThan(numbers, threshold) {
+      return numbers.filter(number => number < threshold).length;
+    }
 
-### `yarn start`
+# 2. Build an Address Book Web App (Solution)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Pre-requisite
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+    node, npm, yarn
 
-### `yarn test`
+Instructions
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    git clone https://github.com/jagcompacion/address-book.git
+    cd address-book
+    yarn install
+    yarn start
 
-### `yarn build`
+List any libs/frameworks
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    bootstrap - for good design
+    react-bootstrap - can be use as a component for react
+    axios - make http request for api
+    redux - for state management
+    react-redux - react can use redux functions
+    redux-thunk - middleware for redux
+    shortid - create random id when adding contact
+    react-router-dom - routing
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+# Final Questions (Answers)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. How long did you spend on this assessment? 1hour
+2. What else would you add to your solution if you had more time? styled-components, typescript, linter, react-testing-library (much better compared to enzyme), prettier, formik, react-toasts for handling success/error message.
+3. List a few of your preferred JS/React frameworks (also let us know when you would choose to use/not
+   use them)? reactjs, angular, vue. preferred react because of the community, better community means solving problems fast.
+4. When a React component needs to make an asynchronous call (such as to an API) what is your
+   preferred approach to achieve this? async/await.
+   Have you had any experience with frontend E2E testing frameworks like cypress.io? (If so please tell us
+   about your experience). yes, we had e2e on our project before. When you create cypress command and run it, it will show it to you on the browser.
+5. What do you think is the most interesting trend in React development or frontend development in
+   general? react17. boring updates no new features. just improvising the performance.

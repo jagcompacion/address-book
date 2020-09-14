@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { loadContacts } from "./actions";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App() {
+import Topbar from "./components/Topbar";
+
+import Contacts from "./pages/Contacts";
+import AddContact from "./pages/AddContact";
+
+const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadContacts());
+  }, [dispatch]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Topbar />
+      <Switch>
+        <Route exact path="/">
+          <Contacts />
+        </Route>
+        <Route path="/add-contact">
+          <AddContact />
+        </Route>
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
